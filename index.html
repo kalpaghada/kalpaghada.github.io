@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    * {
+        background-color: black;
+        color: floralwhite;
+    }
+
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .loader {
+        border: 1.5vh solid black;
+        border-radius: 50%;
+        border-top: 1.5vh solid gold;
+        border-right:1.5vh solid floralwhite;
+        border-bottom:1.5vh solid floralwhite;
+        border-left:1.5vh solid floralwhite;
+        width: 5vh;
+        height: 5vh;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+    }
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Kalp</title>
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="Kalp.styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+        <h1 class="vertical-center" style="font-family: 'League Spartan Black'; text-align: center;"><div class="loader"></div></h1>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>
